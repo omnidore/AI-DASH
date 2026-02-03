@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Learning Dashboards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">AI-DASH</p>
+        <h1>Teacher + Student Learning Dashboards</h1>
+        <p class="subhead">
+          Generate quizzes from teacher notes, personalize flashcards, and surface student
+          growth opportunities with actionable development plans.
+        </p>
+      </div>
+      <div class="hero-actions">
+        <button class="primary">Create AI Quiz</button>
+        <button class="ghost">Share Class Report</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card" aria-labelledby="teacher-title">
+        <div class="card-header">
+          <h2 id="teacher-title">Teacher Dashboard</h2>
+          <span class="status">Live Class</span>
+        </div>
+        <div class="stack">
+          <div class="panel">
+            <h3>Teacher Notes → AI Quiz Builder</h3>
+            <p>
+              Drop lesson notes, prompts, or slide summaries and let the AI generate
+              standards-aligned quizzes with difficulty tagging.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Notes Intake</span>
+              <span class="pill">Auto Summaries</span>
+              <span class="pill">Question Bank</span>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Class Insights</h3>
+            <ul class="insight-list">
+              <li>
+                <strong>Struggle Areas:</strong> proportional reasoning, evidence-based
+                writing, diagram interpretation.
+              </li>
+              <li>
+                <strong>Suggested Reteach:</strong> 10-min micro-lesson + targeted
+                flashcards.
+              </li>
+              <li>
+                <strong>Development Plans:</strong> auto-generated per learner with
+                checkpoint dates.
+              </li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Student Results</h3>
+            <div class="table">
+              <div class="row header">
+                <span>Student</span>
+                <span>Quiz Avg</span>
+                <span>Drawbacks</span>
+                <span>Action</span>
+              </div>
+              <div class="row">
+                <span>Maya R.</span>
+                <span>84%</span>
+                <span>Explains answer without citing notes</span>
+                <button>Review Plan</button>
+              </div>
+              <div class="row">
+                <span>Jordan T.</span>
+                <span>72%</span>
+                <span>Missed steps in calculations</span>
+                <button>Adjust Support</button>
+              </div>
+              <div class="row">
+                <span>Avery K.</span>
+                <span>91%</span>
+                <span>Needs deeper analysis</span>
+                <button>Stretch Goal</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="student-title">
+        <div class="card-header">
+          <h2 id="student-title">Student Dashboard</h2>
+          <span class="status status-alt">Next Quiz Ready</span>
+        </div>
+        <div class="stack">
+          <div class="panel">
+            <h3>Today’s Quiz</h3>
+            <p>
+              Personalized quiz built from the teacher’s notes and your recent mistakes.
+              You’ll get immediate feedback with what to improve.
+            </p>
+            <div class="quiz-meta">
+              <div>
+                <span class="label">Focus</span>
+                <p>Cause &amp; Effect, Data Charts</p>
+              </div>
+              <div>
+                <span class="label">Length</span>
+                <p>12 Questions · 20 mins</p>
+              </div>
+              <div>
+                <span class="label">Mode</span>
+                <p>Mixed Response</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Flashcards</h3>
+            <p>AI-curated flashcards highlight tricky terms and formulas.</p>
+            <div class="flashcards">
+              <article>
+                <h4>Primary Source</h4>
+                <p>Original evidence from the time period.</p>
+              </article>
+              <article>
+                <h4>Line of Best Fit</h4>
+                <p>Trend line that models data on a scatter plot.</p>
+              </article>
+              <article>
+                <h4>Claim + Evidence</h4>
+                <p>Answer structure that cites notes and observations.</p>
+              </article>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Your Growth Plan</h3>
+            <p>
+              You’re strongest at recall. Build confidence with deeper explanations and
+              supporting evidence.
+            </p>
+            <ol class="plan">
+              <li>Review the feedback notes and rewrite 2 answers with citations.</li>
+              <li>Complete the 5-question booster quiz by Friday.</li>
+              <li>Share one reflection with your teacher.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>AI-generated analytics are suggestions. Teachers can edit, approve, and share.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
