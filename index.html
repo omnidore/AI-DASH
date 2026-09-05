@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b12" />
+    <title>APEX / Race Control</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="track-view" aria-label="3D track simulation">
+        <canvas id="race-canvas"></canvas>
+        <div class="topbar">
+          <a class="brand" href="#"><span class="brand-mark">A</span><span>APEX</span><i></i><em>RACE CONTROL</em></a>
+          <div class="session"><span class="live-dot"></span><span>LIVE SIMULATION</span><strong>RACE</strong><b>18 / 58</b></div>
+          <button class="settings" aria-label="Settings">✦</button>
+        </div>
+        <div class="telemetry-card">
+          <div class="telemetry-head"><span>CAR TELEMETRY</span><span class="car-id">#01</span></div>
+          <div class="speed"><strong id="speed">287</strong><span>KM/H</span></div>
+          <div class="gear"><small>GEAR</small><b id="gear">7</b><span class="rpm"><i id="rpm-bar"></i></span><small id="rpm">10,860 RPM</small></div>
+          <div class="metric-row"><div><small>THROTTLE</small><b id="throttle">84%</b></div><div><small>BRAKE</small><b id="brake">0%</b></div><div><small>ERS</small><b id="ers">62%</b></div></div>
+        </div>
+        <div class="track-label"><span>TURN 10</span><strong>GRANDSTAND COMPLEX</strong><p>1:24.619 <i>−0.184</i></p></div>
+        <div class="camera-controls"><button class="camera active" data-camera="follow">FOLLOW</button><button class="camera" data-camera="aerial">AERIAL</button><button class="camera" data-camera="cockpit">COCKPIT</button></div>
+        <button id="pause" class="pause" aria-label="Pause simulation">Ⅱ</button>
+        <div class="race-strip"><div class="strip-head"><span>RACE STRATEGY</span><span>FORECAST <b>☀ 24°</b></span></div><div class="strategy-line"><span class="driver-dot orange"></span><b>PIT WINDOW</b><div class="laps"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>LAP 23–27</strong></div></div>
+      </section>
+      <aside class="race-panel">
+        <header><div><p>2025 WORLD CHAMPIONSHIP</p><h1>MONACO <span>GP</span></h1></div><div class="flag" aria-label="Monaco flag"><i></i><i></i></div></header>
+        <div class="track-map"><div class="map-caption"><span>CIRCUIT DE MONACO</span><b>3.337 KM</b></div><svg viewBox="0 0 320 128" aria-label="Circuit map"><path d="M80 21 C128 -4 209 5 224 34 C236 57 210 54 192 58 C177 62 194 79 222 76 C257 72 279 88 268 105 C252 129 177 112 151 110 C113 106 95 126 65 111 C43 100 53 82 76 76 C101 69 82 55 58 50 C27 44 38 31 80 21Z"/><circle cx="93" cy="18" r="4"/><text x="103" y="20">START</text></svg></div>
+        <div class="tabs"><button class="active">TIMING</button><button>TYRES</button><button>RADIO</button></div>
+        <ol class="leaderboard">
+          <li class="leader"><span class="position">1</span><span class="driver-name"><b>VER</b><small>MAX VERSTAPPEN</small></span><span class="gap">LEADER</span><span class="tyre soft"></span></li>
+          <li class="selected"><span class="position">2</span><span class="driver-name"><b>LEC</b><small>CHARLES LECLERC</small></span><span class="gap">+1.284</span><span class="tyre medium"></span></li>
+          <li><span class="position">3</span><span class="driver-name"><b>NOR</b><small>LANDO NORRIS</small></span><span class="gap">+3.617</span><span class="tyre medium"></span></li>
+          <li><span class="position">4</span><span class="driver-name"><b>PIA</b><small>OSCAR PIASTRI</small></span><span class="gap">+5.041</span><span class="tyre hard"></span></li>
+          <li><span class="position">5</span><span class="driver-name"><b>HAM</b><small>LEWIS HAMILTON</small></span><span class="gap">+8.734</span><span class="tyre hard"></span></li>
+          <li><span class="position">6</span><span class="driver-name"><b>RUS</b><small>GEORGE RUSSELL</small></span><span class="gap">+11.092</span><span class="tyre medium"></span></li>
+        </ol>
+        <footer><button id="race-action"><span>▶</span> RESUME RACE</button><button class="more">•••</button></footer>
+      </aside>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
